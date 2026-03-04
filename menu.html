@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeanCraft Coffee Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f2f2f2;
+color:#222;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 6%;
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-weight:700;
+color:#e86b1f;
+font-size:18px;
+}
+
+nav{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+}
+nav a:hover{
+    color: #e86b1f;
+}
+
+.order-btn{
+background:#e86b1f;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+}
+
+/* HERO */
+
+.hero{
+margin:40px 6%;
+border-radius:14px;
+padding:70px;
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+/* CATEGORY */
+
+.categories{
+display:flex;
+gap:15px;
+padding:20px 6%;
+flex-wrap:wrap;
+}
+
+.pill{
+background:#fff;
+padding:10px 16px;
+border-radius:25px;
+font-size:13px;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.pill.active{
+background:#e86b1f;
+color:white;
+}
+.pill:hover{
+background:#E86B1F;
+color:white;
+cursor:pointer;
+}
+.espresso-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+/* SECTION */
+
+.section{
+padding:40px 6%;
+}
+
+.section h2{
+margin-bottom:5px;
+}
+
+.section p{
+color:#e86b1f;
+font-size:13px;
+margin-bottom:25px;
+}
+
+/* ESPRESSO GRID */
+
+.espresso-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.espresso-card{
+background:white;
+border-radius:12px;
+padding:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.espresso-card img{
+width:100%;
+border-radius:10px;
+height:220px;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+.price{
+float:right;
+color:#e86b1f;
+font-weight:600;
+font-size:13px;
+}
+
+.espresso-card p{
+font-size:13px;
+color:#666;
+}
+
+/* MANUAL BREW */
+
+.manual-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.manual-card{
+background:#fff;
+border-radius:12px;
+display:flex;
+gap:15px;
+padding:15px;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.manual-card img{
+width:120px;
+height:90px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* SEASONAL */
+
+/* Seasonal Specials Cards */
+
+.season-card{
+background:linear-gradient(135deg,#fff,#fde8db);
+padding:30px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.season-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.season-card h4{
+margin-bottom:8px;
+font-size:16px;
+}
+
+.season-card span{
+color:#E86B1F;
+font-weight:600;
+font-size:14px;
+}
+
+.season-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:60px;
+background:#2b1a0f;
+color:white;
+padding:50px 6%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+footer p, footer a{
+font-size:13px;
+color:#ddd;
+text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.espresso-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.manual-grid{
+grid-template-columns:1fr;
+}
+
+.season-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.hero{
+padding:40px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.espresso-grid{
+grid-template-columns:1fr;
+}
+
+.season-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">BeanCraft</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="menu.html" style="color:#e86b1f;">Explore Menu</a>
+<a href="guide.html">Our Brewing Guides</a>
+<a href="story.html">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+<a class="order-btn">Order Online</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Our Coffee Menu</h1>
+<p>Explore our curated collection of ethically sourced beans and expertly roasted drinks.</p>
+
+</section>
+
+
+<div class="categories">
+
+<div class="pill active">Signature Espresso</div>
+<div class="pill">Manual Brews</div>
+<div class="pill">Seasonal Specials</div>
+<div class="pill">Botanical Teas</div>
+
+</div>
+
+
+<section class="section">
+
+<h2>Signature Espresso</h2>
+<p>Traditional roots, modern execution</p>
+
+<div class="espresso-grid">
+
+<div class="espresso-card">
+
+<img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=80">
+
+<h4>Classic Latte <span class="price">$4.50</span></h4>
+<p>Notes of dark chocolate and roasted hazelnuts.</p>
+
+</div>
+
+
+<div class="espresso-card">
+
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80">
+
+<h4>Double Espresso <span class="price">$3.25</span></h4>
+<p>Rich crema with bright citrus acidity.</p>
+
+</div>
+
+
+<div class="espresso-card">
+
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80">
+
+<h4>Cappuccino <span class="price">$4.25</span></h4>
+<p>Perfectly balanced espresso with airy foam.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Manual Brews</h2>
+<p>Precision brewing for the coffee purist</p>
+
+<div class="manual-grid">
+
+<div class="manual-card">
+
+<img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=800&q=80">
+
+<div>
+<h4>V60 Pour Over</h4>
+<p>$6.00 – Clean body with nuanced clarity.</p>
+</div>
+
+</div>
+
+<div class="manual-card">
+
+<img src="https://images.unsplash.com/photo-1525088553748-01d6e210e00b?auto=format&fit=crop&w=800&q=80">
+
+<div>
+<h4>Chemex for Two</h4>
+<p>$10.00 – Triple filtered clarity.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Seasonal Specials</h2>
+<p>Limited time creations inspired by the season</p>
+
+<div class="season-grid">
+
+<div class="season-card">
+<h4>Winter Spiced Mocha</h4>
+<span>$5.75</span>
+</div>
+
+<div class="season-card">
+<h4>Honeycomb Latte</h4>
+<span>$5.50</span>
+</div>
+
+<div class="season-card">
+<h4>Smoked Cedar Cold Brew</h4>
+<span>$6.25</span>
+</div>
+
+<div class="season-card">
+<h4>Lavender Haze</h4>
+<span>$5.25</span>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h4>BeanCraft</h4>
+<p>Artisan coffee house dedicated to craft and quality.</p>
+</div>
+
+<div>
+<h4>Hours</h4>
+<p>Mon-Fri 7:00-19:00</p>
+<p>Sat 8:00-20:00</p>
+<p>Sun 9:00-17:00</p>
+</div>
+
+<div>
+<h4>Find Us</h4>
+<p>123 Espresso Lane</p>
+<p>NY 10001</p>
+</div>
+
+<div>
+<h4>Newsletter</h4>
+<p>Join our brew club for new seasonal blends.</p>
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

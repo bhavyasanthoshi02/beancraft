@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BeanCraft Coffee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f5f7;
+color:#333;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 12px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{
+font-weight:700;
+color:#ff7a18;
+font-size:18px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+nav a{
+font-size:14px;
+color:#555;
+transition:.3s;
+}
+
+nav a:hover{
+color:#c46a2d;
+}
+
+.order-btn{
+background:#c46a2d;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+width:90%;
+margin:40px auto;
+height:360px;
+border-radius:14px;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.4)),
+url("https://res.cloudinary.com/dpt0bypdk/image/upload/v1772602726/coffee_vlcvum.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:flex-end;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-text{
+color:white;
+margin:30px;
+}
+
+.hero-text h2{
+font-size:32px;
+font-weight:600;
+}
+
+.hero-text p{
+font-size:14px;
+opacity:.9;
+}
+
+/* MAIN LAYOUT */
+
+.container{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding-bottom:60px;
+}
+
+/* LEFT */
+
+.section-title{
+font-size:22px;
+margin-bottom:18px;
+}
+
+.section-title i{
+color:#c46a2d;
+margin-right:8px;
+}
+
+.map{
+height:180px;
+border-radius:12px;
+background:#1e2533;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-bottom:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,0.07);
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card h4{
+font-size:13px;
+margin-bottom:6px;
+color:#c46a2d;
+}
+
+.card p{
+font-size:13px;
+color:#555;
+}
+
+/* SOCIAL */
+
+.social{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icons i{
+font-size:18px;
+margin-right:12px;
+color:#555;
+cursor:pointer;
+transition:.3s;
+}
+
+.icons i:hover{
+color:#c46a2d;
+}
+
+/* FORM */
+
+.form{
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form h3{
+font-size:24px;
+margin-bottom:6px;
+}
+
+.form p{
+font-size:13px;
+color:#777;
+margin-bottom:20px;
+}
+
+.input{
+margin-bottom:16px;
+}
+
+label{
+font-size:12px;
+color:#777;
+display:block;
+margin-bottom:4px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:10px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+outline:none;
+}
+input:focus,
+select:focus,
+textarea:focus{
+border:1px solid #E86B1F;
+box-shadow:0 0 5px rgba(232,107,31,0.3);
+}
+
+textarea{
+height:100px;
+resize:none;
+}
+
+.send{
+width:100%;
+background:#c46a2d;
+color:white;
+border:none;
+padding:12px;
+border-radius:7px;
+cursor:pointer;
+font-size:14px;
+transition:.3s;
+}
+
+.send:hover{
+background:#a85523;
+transform:scale(1.03);
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+font-size:13px;
+color:#777;
+background:white;
+margin-top:40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.hero{
+height:280px;
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+height:220px;
+}
+
+.hero-text h2{
+font-size:24px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+BeanCraft
+</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="menu.html">Explore Menu</a>
+<a href="guide.html">Our Brewing Guides</a>
+<a href="story.html">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html" style="color:#e86b1f;">Visit & Contact</a>
+<a class="order-btn">Order Now</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+<h2>Visit & Contact Us</h2>
+<p>Freshly roasted beans brewed for your pleasure.</p>
+</div>
+
+</section>
+
+
+<section class="container">
+
+<div>
+
+<h3 class="section-title">
+<i class="fa-solid fa-location-dot"></i> Find Us
+</h3>
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=coffee%20shop&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="180"
+style="border:0;border-radius:12px;">
+</iframe>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h4><i class="fa-solid fa-location-dot"></i> LOCATION</h4>
+<p>14 Bean St, Brew City<br>NY 10001, United States</p>
+</div>
+
+<div class="card">
+<h4><i class="fa-solid fa-phone"></i> CONTACT</h4>
+<p>hello@beancraft.com<br>+1 (555) 234-456</p>
+</div>
+
+<div class="card">
+<h4><i class="fa-solid fa-clock"></i> WEEKDAYS</h4>
+<p>Mon – Fri<br>7 AM – 7 PM</p>
+</div>
+
+<div class="card">
+<h4><i class="fa-solid fa-calendar"></i> WEEKENDS</h4>
+<p>Sat – Sun<br>8 AM – 6 PM</p>
+</div>
+
+</div>
+
+<div class="social">
+
+<p>Follow the Roast</p>
+
+<div class="icons">
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-twitter"></i>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="form">
+
+<h3>Send an Inquiry</h3>
+
+<p>Have a question or want to book an event? Let us know below.</p>
+
+<div class="input">
+<label>FULL NAME</label>
+<input type="text" placeholder="John Doe">
+</div>
+
+<div class="input">
+<label>EMAIL ADDRESS</label>
+<input type="email" placeholder="john@example.com">
+</div>
+
+<div class="input">
+<label>GENERAL INQUIRY</label>
+<select>
+<option>General Inquiry</option>
+<option>Booking</option>
+<option>Feedback</option>
+</select>
+</div>
+
+<div class="input">
+<label>YOUR MESSAGE</label>
+<textarea placeholder="Tell us more about your inquiry..."></textarea>
+</div>
+
+<button class="send">Send Message</button>
+
+</div>
+
+</section>
+
+
+<footer>
+© 2024 BeanCraft Artisan Coffee House. All rights reserved.
+</footer>
+
+</body>
+</html>
+```

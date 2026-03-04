@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BeanCraft Coffee</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 6%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-weight:700;
+color:#ff7a18;
+font-size:18px;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+}
+nav a:hover{
+    color: #ff7a18;
+}
+
+.search{
+padding:8px 12px;
+border-radius:20px;
+border:1px solid #ddd;
+}
+
+.join{
+background:#ff7a18;
+color:white;
+border:none;
+padding:8px 16px;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:auto;
+
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:grid;
+grid-template-columns: 1fr 1fr;
+align-items:center;
+padding:70px 8%;
+gap: 50px;
+color:white;
+}
+
+.hero-content{
+max-width:520px;
+}
+
+.hero h1{
+font-size:52px;
+font-weight:700;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero img{
+width:100%;
+height:480px;
+object-fit:cover;
+border-radius:12px;
+margin-top: -12px;
+}
+.hero p{
+font-size:14px;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top: 25px;
+}
+
+.btn-orange{
+background:#ff7a18;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+ transition: 0.3s ease;
+}
+.btn-orange:hover{
+    background: transparent;
+    border: solid white;
+    color: white;
+}
+.btn-orange a{
+    text-decoration: none;
+    color:white;
+    transition: .3s;
+}
+.btn-dark {
+background:transparent;
+border:1px solid white;
+padding:10px 20px;
+border-radius:25px;
+transition: 0.3s ease;
+}
+.btn-dark a{
+    color: white;
+    text-decoration: none;
+}
+ 
+
+/* PHILOSOPHY */
+
+.philosophy{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding:80px 6%;
+background:#ececec;
+align-items:center;
+}
+
+.philosophy h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.cards{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+flex:1;
+}
+
+.philosophy img{
+width:100%;
+border-radius:15px;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:80px 6%;
+}
+
+.products h2{
+margin-bottom:30px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.product{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.product img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
+}
+.product:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.price{
+color:#ff7a18;
+font-weight:600;
+}
+
+.add{
+margin-top:10px;
+background:#0b1a2b;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+width:100%;
+}
+
+/* LOCATION */
+
+.location{
+margin:80px 6%;
+background:
+linear-gradient(rgba(10,20,40,0.9),rgba(10,20,40,0.9)),
+url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=80");
+
+background-size:cover;
+border-radius:25px;
+padding:60px;
+color:white;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.location img{
+width:100%;
+border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:white;
+padding:50px 6%;
+margin-top:60px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:40px;
+}
+
+.footer-grid h4{
+margin-bottom:10px;
+}
+
+.footer-grid p,
+.footer-grid a{
+font-size:13px;
+color:#666;
+display:block;
+margin-bottom:6px;
+text-decoration:none;
+}
+
+.subscribe{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.subscribe input{
+padding:8px;
+border-radius:6px;
+border:1px solid #ccc;
+flex:1;
+}
+
+.subscribe button{
+background:#ff7a18;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+}
+/* Coffee Journey Section */
+
+.section{
+padding:80px 8%;
+text-align:center;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card h3{
+color:#E86B1F;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:36px;
+}
+
+.philosophy{
+grid-template-columns:1fr;
+}
+
+.product-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.location{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero img{
+display:none;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:40px 5%;
+height:auto;
+text-align:center;
+}
+
+.hero-content{
+margin:auto;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">BEANCRAFT</div>
+
+<nav>
+
+<a href="home.html" style="color:#e86b1f;">Home</a>
+<a href="menu.html">Explore Menu</a>
+<a href="guide.html">Our Brewing Guides</a>
+<a href="story.html">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+
+<button class="join">Join Club</button>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80" alt="Coffee Roaster Machine">
+
+<div class="hero-content">
+
+<h1>Artisan Coffee, Crafted with Heart</h1>
+
+<p>Experience the perfect pour at BeanCraft. We roast in small batches to preserve the unique character of every bean.</p>
+
+<div class="hero-buttons">
+
+<button class="btn-orange"><a href=guide.html> Blends</a></button>
+<button class="btn-dark"><a href="story.html">Our Story</a></button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="philosophy">
+
+<div>
+
+<h2>Our Philosophy</h2>
+
+<p>Rooted in sustainability and the pursuit of the perfect roast.</p>
+
+<div class="cards">
+
+<div class="card">
+<h4>Ethically Sourced</h4>
+<p>Direct partnerships with farmers.</p>
+</div>
+
+<div class="card">
+<h4>Artisanal Roasting</h4>
+<p>Small batch roasting for complex flavor.</p>
+</div>
+
+</div>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=80">
+
+</section>
+
+
+<section class="products">
+
+<h2>Our Signature Coffee Blends</h2>
+
+<div class="product-grid">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80">
+
+<h4>Ethiopian Yirgacheffe</h4>
+
+<div class="price">$22.00</div>
+
+<button class="add">Add to Cart</button>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1525088553748-01d6e210e00b?auto=format&fit=crop&w=800&q=80">
+
+<h4>Sumatra Gayo Mountain</h4>
+
+<div class="price">$24.00</div>
+
+<button class="add">Add to Cart</button>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80">
+
+<h4>Colombia Huila</h4>
+
+<div class="price">$19.00</div>
+
+<button class="add">Add to Cart</button>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2 class="section-title">From Bean to Cup</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3> Bean Selection</h3>
+<p>We source premium beans from sustainable farms around the world.</p>
+</div>
+
+<div class="card">
+<h3> Small Batch Roasting</h3>
+<p>Our beans are roasted in small batches for perfect flavor.</p>
+</div>
+
+<div class="card">
+<h3> Expert Brewing</h3>
+<p>Every cup is brewed using precise techniques.</p>
+</div>
+
+<div class="card">
+<h3> Perfect Cup</h3>
+<p>Enjoy rich aroma and smooth taste in every sip.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="location">
+
+<div>
+
+<h2>Find Your Seat at BeanCraft</h2>
+
+<p>Whether you're here for a quick espresso or a slow afternoon brew, our doors are open.</p>
+
+<br>
+
+<button class="btn-orange">Get Directions</button>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80">
+
+</section>
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h4>BeanCraft</h4>
+
+<p>Elevating the coffee experience through meticulous roasting.</p>
+
+</div>
+
+<div>
+
+<h4>Navigation</h4>
+
+<a>Shop All</a>
+<a>Subscriptions</a>
+<a>Brew Gear</a>
+<a>Wholesale</a>
+
+</div>
+
+<div>
+
+<h4>Company</h4>
+
+<a>Our Story</a>
+<a>Sustainability</a>
+<a>Careers</a>
+<a>Contact</a>
+
+</div>
+
+<div>
+
+<h4>Newsletter</h4>
+
+<p>Join our brew club for exclusive tips.</p>
+
+<div class="subscribe">
+
+<input placeholder="Email Address">
+<button>Subscribe</button>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>

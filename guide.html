@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeanCraft Brewing Guides</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f3f3f3;
+color:#1f2937;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 6%;
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+color:#e86b1f;
+}
+
+nav{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#374151;
+font-size:14px;
+}
+nav a:hover{
+    color: #e86b1f;
+}
+
+.search{
+padding:8px 14px;
+border-radius:20px;
+border:1px solid #ddd;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 6%;
+max-width:900px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#6b7280;
+line-height:1.6;
+}
+
+/* FILTER */
+
+.filters{
+display:flex;
+gap:25px;
+padding:0 6% 30px 6%;
+border-bottom:1px solid #eee;
+}
+
+.filters a{
+text-decoration:none;
+font-size:14px;
+color:#6b7280;
+}
+
+.filters .active{
+color:#e86b1f;
+border-bottom:2px solid #e86b1f;
+padding-bottom:6px;
+}
+
+/* GUIDE GRID */
+
+.guides{
+padding:40px 6%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+.meta{
+font-size:13px;
+color:#6b7280;
+margin-bottom:12px;
+}
+.badge{
+display:inline-block;
+background:#fde8db;
+color:#E86B1F;
+font-size:12px;
+padding:4px 10px;
+border-radius:20px;
+margin-right:6px;
+font-weight:500;
+}
+
+.learn{
+background:#e86b1f;
+color:white;
+border:none;
+padding:9px 14px;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+margin:60px 6%;
+background:#efe4da;
+border-radius:16px;
+padding:50px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.cta h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.cta p{
+color:#4b5563;
+margin-bottom:18px;
+}
+
+.cta button{
+background:#e86b1f;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+}
+
+.cta img{
+width:100%;
+border-radius:12px;
+}
+.cta button:hover{
+transform:scale(1.05);
+}
+/* FOOTER */
+
+footer{
+margin-top:40px;
+background:white;
+border-top:1px solid #eee;
+padding:25px 6%;
+display:flex;
+justify-content:space-between;
+font-size:14px;
+color:#6b7280;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.guides{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cta{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:30px;
+}
+
+.guides{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">BeanCraft</div>
+
+<nav>
+
+<a href="home.html">Home</a>
+<a href="menu.html">Explore Menu</a>
+<a href="guide.html" style="color:#e86b1f;">Our Brewing Guides</a>
+<a href="story.html">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+<input class="search" placeholder="Search guides">
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<h1>Home Brewing Guides</h1>
+
+<p>
+Elevate your morning ritual. From the precision of the V60 to the bold body
+of the French Press, master the art of coffee at home with expert
+step-by-step instructions.
+</p>
+
+</section>
+
+
+
+<div class="filters">
+
+<a class="active">All Methods</a>
+<a>Pour Over</a>
+<a>Immersion</a>
+<a>Pressure</a>
+<a>Cold Brew</a>
+
+</div>
+
+
+
+<section class="guides">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=900&auto=format&fit=crop" loading="lazy">
+
+<div class="card-content">
+
+<h3>V60 Pour Over</h3>
+
+<div class="meta">
+<span class="badge">Easy</span>
+<span class="badge">4 mins</span>
+</div>
+
+<button class="learn">Learn More →</button>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>French Press</h3>
+
+<div class="meta">Difficulty: Easy • Time: 4 mins</div>
+
+<button class="learn">Learn More →</button>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>AeroPress</h3>
+
+<div class="meta">Difficulty: Easy • Time: 2 mins</div>
+
+<button class="learn">Learn More →</button>
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?auto=format&fit=crop&w=900&q=80">
+
+<div class="card-content">
+
+<h3>Chemex</h3>
+
+<div class="meta">Difficulty: Intermediate • Time: 5-6 mins</div>
+
+<button class="learn">Learn More →</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="cta">
+
+<div>
+
+<h2>Need the right beans?</h2>
+
+<p>
+Our artisan roasts are profiled specifically for different brewing
+methods. Get the perfect grind and roast delivered to your door.
+</p>
+
+<button>Shop Roasted Beans</button>
+
+</div>
+
+
+<img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?auto=format&fit=crop&w=900&q=80">
+
+</section>
+
+
+
+<footer>
+
+<div>BeanCraft © 2024 Artisan Coffee Roasters</div>
+
+<div>Instagram • YouTube • Newsletter</div>
+
+</footer>
+
+
+</body>
+</html>

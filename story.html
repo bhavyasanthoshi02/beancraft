@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BeanCraft Story</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:#e86b1f;
+}
+
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-size:14px;
+}
+
+.order-btn{
+background:#e86b1f;
+color:white;
+padding:8px 16px;
+border-radius:8px;
+font-size:13px;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:70px 8%;
+gap:50px;
+}
+
+.hero img{
+width:100%;
+border-radius:12px;
+}
+
+.hero-text small{
+color:#e86b1f;
+letter-spacing:2px;
+font-size:11px;
+}
+
+.hero-text h1{
+font-size:44px;
+margin:10px 0 20px;
+}
+
+.hero-text p{
+color:#666;
+font-size:14px;
+margin-bottom:20px;
+max-width:420px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+.btn-primary{
+background:#e86b1f;
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+}
+
+.btn-outline{
+border:1px solid #e86b1f;
+padding:10px 20px;
+border-radius:8px;
+color:#e86b1f;
+background:white;
+}
+
+/* ORIGIN */
+
+.origin{
+padding:80px 8%;
+}
+
+.origin small{
+color:#e86b1f;
+letter-spacing:2px;
+font-size:11px;
+}
+
+.origin h2{
+margin:10px 0 15px;
+font-size:32px;
+}
+
+.origin p{
+color:#666;
+max-width:550px;
+margin-bottom:40px;
+font-size:14px;
+}
+
+.origin-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.origin-card img{
+width:100%;
+border-radius:12px;
+height:220px;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+.origin-card h3{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.origin-card p{
+font-size:13px;
+color:#666;
+}
+
+/* MILESTONES */
+
+.milestones{
+background:#e9ecef;
+padding:80px 8%;
+text-align:center;
+}
+
+.milestones h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.timeline{
+max-width:700px;
+margin:50px auto;
+border-left:3px solid #e86b1f;
+padding-left:30px;
+text-align:left;
+}
+
+.step{
+margin-bottom:40px;
+position:relative;
+}
+
+.circle{
+position:absolute;
+left:-42px;
+top:0;
+background:#e86b1f;
+width:24px;
+height:24px;
+border-radius:50%;
+}
+
+.step span{
+font-size:12px;
+color:#e86b1f;
+font-weight:600;
+}
+
+.step h4{
+margin:5px 0;
+}
+
+.step p{
+font-size:13px;
+color:#555;
+}
+
+/* FOOTER */
+
+footer{
+background:#0c1a33;
+color:white;
+padding:60px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:40px;
+}
+
+footer h4{
+margin-bottom:10px;
+}
+
+footer p, footer a{
+font-size:13px;
+color:#ccc;
+text-decoration:none;
+display:block;
+margin-bottom:6px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.origin-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:50px 6%;
+}
+
+.hero img{
+order:2;
+margin-top:20px;
+}
+
+.hero-text h1{
+font-size:30px;
+}
+
+.hero-text p{
+font-size:13px;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.origin{
+padding:60px 6%;
+}
+
+.origin h2{
+font-size:24px;
+}
+
+.origin-grid{
+grid-template-columns:1fr;
+}
+
+.origin-card img{
+height:180px;
+}
+
+.milestones{
+padding:60px 6%;
+}
+
+.timeline{
+padding-left:25px;
+}
+
+.circle{
+left:-36px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<div class="logo">BeanCraft</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="menu.html">Explore Menu</a>
+<a href="guide.html">Our Brewing Guides</a>
+<a href="story.html" style="color:#e86b1f;">Our Story</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+<a class="order-btn">Order Now</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80">
+
+<div class="hero-text">
+
+<small>EST. 1998</small>
+
+<h1>BeanCraft: An Artisan Legacy</h1>
+
+<p>
+Born from a passion for the perfect roast, our journey began with a single vintage machine and a vision for exceptional coffee.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn-primary">Our Heritage</button>
+<button class="btn-outline">Watch Story</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="origin">
+
+<small>THE ORIGIN</small>
+
+<h2>From Source to Cup: Ethical Sourcing & Heritage</h2>
+
+<p>
+We partner directly with small-batch farmers to ensure every bean tells a story of quality and sustainability.
+</p>
+
+
+<div class="origin-grid">
+
+<div class="origin-card">
+
+<img src="https://images.unsplash.com/photo-1515442261605-65987783cb6a?auto=format&fit=crop&w=900&q=80">
+
+<h3>Ethiopian Highlands</h3>
+
+<p>
+Sourced from Yirgacheffe region with distinctive floral and citrus notes.
+</p>
+
+</div>
+
+
+<div class="origin-card">
+
+<img src="https://images.unsplash.com/photo-1596075780750-81249df16d19?auto=format&fit=crop&w=900&q=80">
+
+<h3>Colombian Valleys</h3>
+
+<p>
+Rich chocolatey profiles sourced from high-altitude farms.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="milestones">
+
+<h2>Our Milestones</h2>
+
+<p>The key chapters of our artisan legacy</p>
+
+<div class="timeline">
+
+<div class="step">
+
+<div class="circle"></div>
+
+<span>1998</span>
+
+<h4>The First Roast</h4>
+
+<p>Started with a 5kg vintage roaster in a small garage.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="circle"></div>
+
+<span>2002</span>
+
+<h4>Opening Our Doors</h4>
+
+<p>First flagship artisan hub opens to the public.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="circle"></div>
+
+<span>2010</span>
+
+<h4>Direct Trade Expansion</h4>
+
+<p>Established direct partnerships with 40+ farming communities.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="circle"></div>
+
+<span>Today</span>
+
+<h4>Modern Artisan Hub</h4>
+
+<p>Pushing boundaries of roasting technology while honoring tradition.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h4>BeanCraft</h4>
+
+<p>Honoring the craft of artisan coffee through sustainable sourcing since 1998.</p>
+
+</div>
+
+<div>
+
+<h4>Explore</h4>
+
+<a>Our Coffee</a>
+<a>Gift Cards</a>
+<a>Subscription</a>
+
+</div>
+
+<div>
+
+<h4>Resources</h4>
+
+<a>Brewing Guides</a>
+<a>Sustainability</a>
+<a>Wholesale</a>
+
+</div>
+
+<div>
+
+<h4>Visit Us</h4>
+
+<a>Seattle, WA</a>
+<a>Portland, OR</a>
+<a>Austin, TX</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
