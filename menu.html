@@ -264,32 +264,94 @@ grid-template-columns:1fr 1fr;
 }
 
 }
-
 @media(max-width:600px){
 
+/* Header Fix */
 header{
 flex-direction:column;
-gap:10px;
+align-items:flex-start;
+gap:15px;
+padding:15px 6%;
 }
 
+nav{
+flex-direction:column;
+width:100%;
+gap:12px;
+}
+
+nav a{
+font-size:15px;
+}
+
+.order-btn{
+display:inline-block;
+width:fit-content;
+}
+
+/* Hero Fix */
 .hero{
-padding:40px;
+margin:20px 6%;
+padding:35px 20px;
+border-radius:12px;
 }
 
 .hero h1{
-font-size:28px;
+font-size:24px;
+line-height:1.3;
 }
 
+.hero p{
+font-size:14px;
+}
+
+/* Categories */
+.categories{
+gap:10px;
+}
+
+.pill{
+font-size:12px;
+padding:8px 14px;
+}
+
+/* Espresso */
 .espresso-grid{
 grid-template-columns:1fr;
 }
 
+.espresso-card img{
+height:180px;
+}
+
+.espresso-card h4{
+font-size:15px;
+}
+
+/* Manual Brew */
+.manual-card{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.manual-card img{
+width:100%;
+height:160px;
+}
+
+/* Seasonal */
 .season-grid{
 grid-template-columns:1fr;
 }
 
+/* Footer */
 .footer-grid{
 grid-template-columns:1fr;
+gap:20px;
+}
+
+footer{
+padding:40px 6%;
 }
 
 }
@@ -473,5 +535,4 @@ grid-template-columns:1fr;
 </footer>
 
 </body>
-
 </html>
